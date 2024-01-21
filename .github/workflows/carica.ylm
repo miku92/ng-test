@@ -1,0 +1,13 @@
+name: Provo
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  deploy:
+     steps:
+      - name: Deploy 
+        env:
+          varia: ${{ secrets.TESTOSECRET }}
+          

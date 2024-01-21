@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+// import { environment } from 'src/environments/environments';
+
+
+// const test1 = environment.firebase.nome 
+const test1 = `${GITHUB_ACTION.Provo.nome}`;
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-test';
+  title = test1;
 }
