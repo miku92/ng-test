@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-// import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environments.prod';
 
 
-// const test1 = environment.firebase.nome 
-const test1 = `${{ secrets.varia}}`;
+const test1 = environment.redisServer
+// const test1 = `${{ secrets.varia}}`;
 
 
 @Component({
