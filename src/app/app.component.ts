@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 
 // const test1 = environment.firebase.nome 
-const test1 = `${{ secrets.API_KEY}}`;
+const test1 = `${{ secrets.varia}}`;
 
 
 @Component({

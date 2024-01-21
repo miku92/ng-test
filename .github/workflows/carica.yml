@@ -4,10 +4,12 @@ on:
     branches:
     - main
 
-jobs:
-  deploy:
-     steps:
-      - name: Deploy 
-        env:
-          varia: ${{ secrets.TESTOSECRET }}
+jobs: 
+  ci-enviroment-setup:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Deploy 
+      run: npm run build -- --prod --configuration=develop
+      env:
+        varia: ${{ secrets.TESTOSECRET }}
           
