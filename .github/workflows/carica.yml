@@ -24,7 +24,7 @@ jobs:
         run: |
           npm install -g @angular/cli
           npm install
-          ng build --prod --base-href="/ng-test/"
+          ng build --configuration production --base-href="/ng-test/"
         env:
           TESTOSECRET: ${{ secrets.TESTOSECRET }}
 
