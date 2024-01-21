@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 
 // const test1 = environment.firebase.nome 
-const test1 = `${GITHUB_ACTION.Provo.nome}`;
+const test1 = `${{ secrets.TESTOSECRET}}`;
 
 
 @Component({
