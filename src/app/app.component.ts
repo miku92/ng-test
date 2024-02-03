@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environments.prod';
-
+import { Router } from '@angular/router';
 
 const test1 = 'casa '+environment.redisServer
-// const test1 = `${{ secrets.varia}}`;
 
 
 @Component({
@@ -11,6 +10,18 @@ const test1 = 'casa '+environment.redisServer
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = test1;
+export class AppComponent implements OnInit{
+  title:string='AAA';
+  constructor(private router:Router){}
+
+
+  ngOnInit(){
+    this.title=TESTOSECRET;
+  }
+  onSubmit() {  
+    console.log('Mannaia la puttana')
+    this.router.navigateByUrl('/mostra-testo');
+} 
 }
+
+
