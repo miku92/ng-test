@@ -21,12 +21,13 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          TESTOSECRET: ${{ secrets.TESTOSECRET }}
         run: |
           npm install -g @angular/cli
           npm install
           node ./.github/workflows/redis.js
           ng build --configuration production --base-href="/ng-test/"
-        env:
-          TESTOSECRET: ${{ secrets.TESTOSECRET }}
+        
 
           
