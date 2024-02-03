@@ -16,10 +16,9 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit(){
-    this.title=TESTOSECRET;
   }
   onSubmit() {  
-    console.log('Mannaia la puttana')
+    console.log('Mannaia la puttana'+environment.redisServer)
     this.router.navigateByUrl('/mostra-testo');
 } 
 }
