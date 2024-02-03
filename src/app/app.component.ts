@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { environment } from 'src/environments/environments.prod';
 
 
-const test1 = environment.redisServer
+const test1 = 'casa '+environment.redisServer
 // const test1 = `${{ secrets.varia}}`;
 
 
