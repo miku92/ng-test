@@ -40,10 +40,7 @@ jobs:
         env:
           TESTOSECRET: ${{ secrets.TESTOSECRET }}
         run: |
-          npm install -g @angular/cli
-          npm install
           node ./.github/workflows/redis.js
-          ng build --configuration production --base-href="/ng-test/"  
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
