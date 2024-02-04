@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  redisServer: 'TESTOSECRET'
+  redisServer: '${process.env.GOOGLE_API_KEY}'
 };
