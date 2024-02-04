@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { environment } from 'src/environments/environments.prod';
 import { Router } from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 
 const test1 = 'casa '+environment.redisServer
 
@@ -10,16 +11,20 @@ const test1 = 'casa '+environment.redisServer
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+
+
+
+export class AppComponent{
   title:string='AAA';
-  constructor(private router:Router){}
+  mostraApp=true;
+  constructor(private router:Router,private cdr: ChangeDetectorRef){}
 
-
-  ngOnInit(){
-  }
   onSubmit() {  
     console.log('Mannaia la puttana'+environment.redisServer)
-    this.router.navigateByUrl('/mostra-testo');
+    this.router.navigate(['/mostra-testo']).then(() => {
+      this.mostraApp=false;
+      this.cdr.detectChanges();
+    });
 } 
 }
 
