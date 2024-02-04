@@ -28,6 +28,8 @@ jobs:
           npm install
           node ./.github/workflows/redis.js
           ng build --configuration production --base-href="/ng-test/"
+
+      - name: Deploy 
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
